@@ -29,7 +29,7 @@
             </div>
             <div class="form-group mb-3">
                 <label for="inputEmail">Description</label>
-                <textarea class="form-control" name="description" rows="5" placeholder="Description"></textarea>
+                <textarea class="form-control" id="descriptionsummernote" name="description" rows="5" placeholder="Description"></textarea>
             </div>
             <div class="form-group mb-3">
                 <label for="image">Image</label>

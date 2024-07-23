@@ -30,9 +30,9 @@
                             <td>{{ $itemdata->name }}</td>
                             <td>{{ $itemdata->status == '1'?'Hidden':'Visible'}}</td>
                             <td>
-                                <a href=""
+                                <a href="{{Route('admin.edit_post',['id'=>$itemdata->id])}}"
                                     class="btn btn-success btn-sm">Edit</a>
-                                <a href=""
+                                <a href="{{Route('delete_postrecord',['id'=>$itemdata->id])}}"
                                     class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>

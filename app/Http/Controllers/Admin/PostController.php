@@ -39,4 +39,43 @@ class PostController extends Controller
         $post->save();
         return redirect('admin/view_post')->with('messagepost','Post Created Successfully');
     }
+    public function edit($id)
+    {
+        $category = Category::where('status',0)->get();
+        $post = Post::find($id);
+        return view("admin.post.edit",compact('post','category'));
+    }
+    public function update(PostFromRequest $request,$id)
+    {
+       
+        $postdata = $request->validated();
+        $post = Post::find($id);
+        $post->category_id = $postdata['category_id'];
+        $post->name = $postdata['name'];
+        $post->slug = $postdata['slug'];
+        $post->description = $postdata['description'];
+        $post->yt_frame = $postdata['yt_frame'];
+        $post->meta_title = $postdata['meta_title'];
+        $post->meta_description = $postdata['meta_description'];
+        $post->meta_keyword = $postdata['meta_keyword'];
+        $post->status = $postdata['status'];
+        $post->created_by = Auth::user()->id;
+        $post->update();
+        return redirect('admin/view_post')->with('messagepost','Post updated Successfully');
+    }
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+        if($post)
+        {
+            $post->delete();
+            return redirect('admin/view_post')->with('messagepost','Record Post Deleted Successfully');
+        }
+        else
+        {
+            return redirect('admin/view_post')->with('messagepost','You could not download it, Not available');
+
+        }
+        
+    }
 }

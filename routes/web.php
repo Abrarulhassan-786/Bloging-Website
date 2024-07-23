@@ -26,4 +26,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('view_post',[PostController::class,'index'])->name('admin.view_post');
     Route::get('add_post',[PostController::class,'create'])->name('admin.add_post');
     Route::post('add_post',[PostController::class,'store'])->name('admin.add_post');
+    Route::get('edit_post/{id}',[PostController::class,'edit'])->name('admin.edit_post');
+    Route::put('update_post/{id}',[PostController::class,'update'])->name('admin.update_post');
+    Route::get('delete_postrecord/{id}',[PostController::class,'destroy'])->name('delete_postrecord');
 });
