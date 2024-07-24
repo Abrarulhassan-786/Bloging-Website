@@ -11,7 +11,7 @@
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="mb-0">View User</h2>
         </div>
-        <table class="table table-striped table-bordered">
+        <table class="table table-striped table-bordered" id="mydataTable">
             <thead class="thead-dark">
                 <tr>
                     <th>ID</th>

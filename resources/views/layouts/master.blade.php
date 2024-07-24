@@ -18,6 +18,14 @@
         {{-- summernote css link- --}}
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="//cdn.datatables.net/2.1.0/css/dataTables.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/2.1.0/css/dataTables.bootstrap5.css">
+        <style>
+            div.dt-container .dt-paging .dt-paging-button {
+                margin-left: 0 !important;
+                padding: 0 !important;
+            }
+        </style>
     </head>
 
     <body>
@@ -36,19 +44,22 @@
         </div>
         {{-- summernote css link- --}}
         <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
-        
+        <script src="//cdn.datatables.net/2.1.0/js/dataTables.min.js"></script>
+
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('assets/js/scripts.js') }}"></script>
+        <script src="https://cdn.datatables.net/2.1.0/js/dataTables.bootstrap5.js"></script>
 
         {{-- summernote Code --}}
         <script>
             $(document).ready(function() {
                 $('#descriptionsummernote').summernote({
-                    height:250,
+                    height: 250,
                 });
-                
+
                 $('.dropdown-toggle').dropdown();
             });
+            let table = new DataTable('#mydataTable');
         </script>
     </body>
 
