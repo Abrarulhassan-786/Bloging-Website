@@ -13,4 +13,20 @@ class UserController extends Controller
         $user = User::all();
         return view('admin.user.index',compact('user'));
     }
+    public function edit($user_id)
+    {
+        $user = User::find($user_id);
+        return view('admin.user.edit',compact('user'));
+    }
+    public function update(Request $request, $user_id)
+    {
+        $user = User::find($user_id);
+        if($user)
+        {
+            $user->role_as =  $request->role_as;
+            $user->update();
+            return redirect('admin/view_user')->with('messageCategory','User Added Role Successfully!');
+        }
+        
+    }
 }

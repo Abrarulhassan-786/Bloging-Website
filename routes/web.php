@@ -33,4 +33,6 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
 
     // User Controller Route
     Route::get('view_user',[UserController::class,'index'])->name('admin.view_user');
+    Route::get('edit_user/{user_id}',[UserController::class,'edit'])->name('admin.edit_user');
+    Route::put('update_user/{user_id}',[UserController::class,'update'])->name('admin.update_user');
 });

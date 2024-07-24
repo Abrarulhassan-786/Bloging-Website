@@ -27,9 +27,9 @@
                     <td>{{ $item->id }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
-                    <td>{{ $item->role_as == 1?'Admin':'User'}}</td>
+                    <td>{{ $item->role_as == 1?'Admin':($item->role_as == 0?'User':'Blogger')}}</td>
                     <td>
-                        <a href="" class="btn btn-success btn-sm">Edit</a>
+                        <a href="{{route('admin.edit_user',['user_id'=>$item->id])}}" class="btn btn-success btn-sm">Edit</a>
                     </td>
                 </tr>
                 @endforeach
