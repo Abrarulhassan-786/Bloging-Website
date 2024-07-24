@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\Post;
 use illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use App\Http\Requests\Admin\PostFromRequest; 
 use Illuminate\Validation\Validator;
 
@@ -28,7 +29,7 @@ class PostController extends Controller
         $post = new Post;
         $post->category_id = $postdata['category_id'];
         $post->name = $postdata['name'];
-        $post->slug = $postdata['slug'];
+        $post->slug = Str::slug($postdata['slug']);
         $post->description = $postdata['description'];
         $post->yt_frame = $postdata['yt_frame'];
         $post->meta_title = $postdata['meta_title'];
@@ -52,7 +53,7 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->category_id = $postdata['category_id'];
         $post->name = $postdata['name'];
-        $post->slug = $postdata['slug'];
+        $post->slug = Str::slug($postdata['slug']);
         $post->description = $postdata['description'];
         $post->yt_frame = $postdata['yt_frame'];
         $post->meta_title = $postdata['meta_title'];
