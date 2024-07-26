@@ -1,37 +1,38 @@
-<header>
-    <div class="container">
-        <div>
-            <h2>Thapa Technical</h2>
+<div class="global-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          {{-- <img src="path_to_logo.png" alt="Logo" style="height: 30px;"> --}}
+          <span>SPJ-CODER Blogger</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
         </div>
-        <nav>
-            <ul>
-                <li> <a href="#" target="_blank" > Home </a> </li>
-                <li>  About
-                    <ul class="drop-down">
-                        <li> <a href="#" target="_blank" > Portfolio </a> </li>
-                        <li> <a href="#" target="_blank" > Teams </a> </li>
-                    </ul>
-                </li>
-                <li> <a href="#" target="_blank" > Gallery </a> </li>
-                <li>  Services
-                    <ul class="drop-down">
-                        <li> <a href="#" target="_blank" > Portfolio </a> </li>
-                        <li> <a href="#" target="_blank" > Teams </a> </li>
-                        <li> <a href="https://www.youtube.com/playlist?list=PLwGdqUZWnOp3t3qT7pvAznwUDzKbhEcCc" target="_blank" > Portfolio </a> </li>
-                        <li> <a href="#" target="_blank" > Teams </a> </li>
-                    </ul>
-                </li>
-                <li> <a href="#" target="_blank" > Contact </a> </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<!--hero section -->
-<section class="hero">
-    <div class="hero__content">
-        <h2>Drop Down Menu</h2>
-        <h4>Free source code</h4>
-        <button>GET NOW</button>
-    </div>
-</section>
+      </div>
+    </nav>
+  </div>
+  
