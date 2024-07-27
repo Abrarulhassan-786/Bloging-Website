@@ -8,11 +8,15 @@ use App\Http\Controllers\Frontend\FrontendController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-Route::get('/',[FrontendController::class,'index']);
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Front End Route
+Route::get('/',[FrontendController::class,'index']);
+Route::get('tutorial/{category_slug}',[FrontendController::class,'viewcategorypost']);
+Route::get('tutorial/{category_slug}/{post_slug}',[FrontendController::class,'viewpost']);
+
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function(){
     Route::get('dashboard',[DashboardController::class,'index'])->name('admin.dashboard');
     Route::get('/category',[CategoryController::class,'index']);

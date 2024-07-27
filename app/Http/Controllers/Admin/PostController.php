@@ -26,6 +26,7 @@ class PostController extends Controller
     public function store(PostFromRequest $request)
     {
         $postdata = $request->validated();
+        dd(Str::slug($postdata['slug']));
         $post = new Post;
         $post->category_id = $postdata['category_id'];
         $post->name = $postdata['name'];
