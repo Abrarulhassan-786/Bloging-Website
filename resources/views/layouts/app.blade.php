@@ -7,7 +7,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Bloging Abrar') }}</title>
+    <title>@yield('title')</title>
+    <meta name="meta_description" content="@yield('meta_description')">
+    <meta name="meta_keyword" content="@yield('meta_keyword')">
 
     <!-- Scripts -->
     

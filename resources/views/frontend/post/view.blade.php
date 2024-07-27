@@ -1,5 +1,8 @@
 @extends('layouts.app')
 @section('content')
+@section('title',$post->meta_title)
+@section('meta_description',$post->meta_description)
+@section('meta_keyword',$post->meta_keyword)
 <div class="container mt-5">
     <div class="row">
         <!-- Post Column -->
