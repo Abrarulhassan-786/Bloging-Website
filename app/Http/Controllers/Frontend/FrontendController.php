@@ -5,13 +5,20 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
     public function index()
     {
-        return view('frontend.index');
+        $latest_post = Post::where('status','0')->orderBy('created_at','DESC')->get()->take(6);
+        $category = Category::where('status','0')->get();
+        foreach($latest_post as $descript)
+        {
+            $descript->description = str::limit($descript->description,100); //limit to 100 character
+        }
+        return view('frontend.index',compact('category','latest_post'));
     }
     public function viewcategorypost(string $category_slug)
     {

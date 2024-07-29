@@ -20,7 +20,7 @@
                         <p class="card-text"></p>
                         <h6>Posted On: {{$item->created_at->format('y-m-d')}}</h6>
                         <h6>Posted by: {{$item->user->name}}</h6>
-                        <a href={{url('tutorial/'.$category->slug.'/'.$item->slug)}} class="btn btn-primary">Read More</a>
+                        <a  href={{url('tutorial/'.$category->slug.'/'.$item->slug)}} class="btn btn-primary">Read More</a>
                     </div>
                 </div>
             @empty
