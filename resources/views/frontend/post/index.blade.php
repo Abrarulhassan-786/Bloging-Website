@@ -18,7 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{$item->name}}</h5>
                         <p class="card-text"></p>
-                        <h6>Posted On: {{$item->created_at}}</h6>
+                        <h6>Posted On: {{$item->created_at->format('y-m-d')}}</h6>
                         <h6>Posted by: {{$item->user->name}}</h6>
                         <a href={{url('tutorial/'.$category->slug.'/'.$item->slug)}} class="btn btn-primary">Read More</a>
                     </div>
