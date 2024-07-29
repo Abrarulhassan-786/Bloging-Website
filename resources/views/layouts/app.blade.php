@@ -36,14 +36,23 @@
     <script  src="{{asset('assets/js/assets/owlcarousel/owl.carousel.min.js')}}"></script>
     <script>
 
-    $(document).ready(function(){
-        $('.owl-carousel').owlCarousel({
+        $('.category-carousel').owlCarousel({
             loop:true,
             margin:10,
             nav:true,
-            items:1
+            dot:false,
+            responsive:{
+                0:{
+                    item:1
+                }
+                600:{
+                    item:3
+                }
+                100:{
+                    item:4
+                }
+            }
         });
-    });
 </script>
 
 

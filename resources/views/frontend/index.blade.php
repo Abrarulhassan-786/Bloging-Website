@@ -1,14 +1,15 @@
 @extends('layouts.app')
 @section('content')
-@section('title', 'SPJ Bloging')
-@section('meta_description', 'Bloging Website')
+@section('title', 'SPJ Blogging')
+@section('meta_description', 'Blogging Website')
 @section('meta_keyword', 'SPJ CODER')
+
 <div class="bg-danger">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
-                <div class="owl-carousel owl-theme">
+                
+                <div class=" category-carousel owl-theme">
                     <div class="item">
                         <div class="card">
                             <img src="" alt="image">
@@ -17,10 +18,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 @endsection
