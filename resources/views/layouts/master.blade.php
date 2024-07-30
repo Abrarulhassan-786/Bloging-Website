@@ -61,6 +61,7 @@
             });
             let table = new DataTable('#mydataTable');
         </script>
+        @yield('script')
     </body>
 
 </html>

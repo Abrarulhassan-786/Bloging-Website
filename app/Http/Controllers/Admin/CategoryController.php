@@ -4,8 +4,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\Admin\CategoryFormRequest; 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
-use illuminate\Support\Facades\Auth;
-use illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Validator;
@@ -107,18 +107,18 @@ class CategoryController extends Controller
         $category->update();
         return redirect('admin/category')->with('messageCategory','Category Updated Successfully');
     }
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        $category = Category::find($id);
+        $category = Category::find($request->category_delete_id);
         if($category)
         {
-            $destination = 'upload/category'.$category->image;
-            if(File::Exits($destination))
-            {
+            $destination = 'upload/category/'.$category->image;
+            if (File::exists($destination)) {
                 File::delete($destination);
             }
             $category->delete();
-            return redirect('admin/category')->with('messageCategory','Delete Record Sucessfully');
+            $category->posts()->delete();
+            return redirect('admin/category')->with('messageCategory','Delete Record with post Sucessfully');
         }
         else
         {
