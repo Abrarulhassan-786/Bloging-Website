@@ -161,3 +161,18 @@ body{
         padding: 0px 15px 25px 15px;
     }
 }
+.post-description
+{
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.post-code-bg {
+    width: 100%;
+    background-color: #212121;
+    overflow-x: auto; /* Changed to auto to enable scrolling when needed */
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}

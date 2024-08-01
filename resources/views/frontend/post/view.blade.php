@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <!-- Post Content -->
-                <div class="mb-4">
+                <div class="mb-4 post-description post-code-bg">
                     <p>{!! $post->description !!}</p>
                     <img src="post-image.jpg" alt="Post Image" class="img-fluid">
                 </div>
