@@ -49,6 +49,8 @@
         <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
         <script src="{{ asset('assets/js/scripts.js') }}"></script>
         <script src="https://cdn.datatables.net/2.1.0/js/dataTables.bootstrap5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+     
 
         {{-- summernote Code --}}
         <script>
