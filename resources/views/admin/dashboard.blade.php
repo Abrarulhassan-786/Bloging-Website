@@ -68,5 +68,36 @@
                 </div>
             </div>
         </div>
+        <div class="container mt-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0">Record</h2>
+            </div>
+            <table class="table table-striped table-bordered" id="mydataTable">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Category Name</th>
+                        <th>Post Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($postdata as $categories)
+                        <tr>
+                            <td>{{ $categories->id }}</td>
+                            <td>{{ $categories->name }}</td>
+                            <td>{{ $categories->category->name }}</td>
+                            <td>
+                                <a href="{{ route('admin.edit_category', ['id' => $categories->id]) }}"
+                                    class="btn btn-success btn-sm">Edit</a>
+                                {{-- <a href="{{route('admin.delete_category',['id'=>$categories->id])}}" class="btn btn-success btn-sm">Delete</a>  --}}
+                                <button type="button" class="btn btn-danger btn-sm deletecategory"
+                                    value="{{ $categories->id }} ">Delete</button>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
     </div>
 @endsection

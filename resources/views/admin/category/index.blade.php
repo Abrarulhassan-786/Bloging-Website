@@ -55,7 +55,7 @@
                                 <img src="{{ asset('upload/category/' . $categories->image) }}" width="50px"
                                     height="50px" alt="image">
                             </td>
-                            <td>{{ $categories->status }}</td>
+                            <td>{{ $categories->status == '0'?'Visible':'Hidden' }}</td>
                             <td>
                                 <a href="{{ route('admin.edit_category', ['id' => $categories->id]) }}"
                                     class="btn btn-success btn-sm">Edit</a>

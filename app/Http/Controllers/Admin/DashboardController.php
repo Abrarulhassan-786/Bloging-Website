@@ -16,6 +16,7 @@ class DashboardController extends Controller
       $totalPost = Post::count();
       $totalUser = User::where('role_as',0)->count();
       $totalAdmin = User::where('role_as',1)->count();
-        return view('admin.dashboard',compact('totalCategory','totalPost','totalUser','totalAdmin')); 
+      $postdata =  Post::all();
+        return view('admin.dashboard',compact('totalCategory','totalPost','totalUser','totalAdmin','postdata')); 
      }
 }

@@ -9,7 +9,7 @@
         @endif
         <div class="container mt-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
-                <h2 class="mb-0">View Category</h2>
+                <h2 class="mb-0">View Post</h2>
                 <a href="{{ route('admin.add_post') }}" class="btn btn-primary">Add Post</a>
             </div>
             <table class="table table-striped table-bordered" id="mydataTable">
