@@ -46,7 +46,10 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                     User
                 </a>
-
+            </div>
+            <div class="d-flex justify-content-center align-items-center">
+                <h5 class="mb-0 me-2 text-white">Logged as:</h5>
+                <span class="badge bg-primary text-white">Admin</span>
             </div>
         </div>
     </nav>

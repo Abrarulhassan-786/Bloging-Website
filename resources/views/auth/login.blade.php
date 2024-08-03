@@ -1,7 +1,8 @@
 @extends('layouts.app')
+@section('title' . 'Login')
 @section('content')
-<div class="container h-100">
-    <div class="container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
+<div class="container h-100 ">
+    <div class=" container d-flex justify-content-center align-items-center" style="min-height: 90vh;">
         <div class="col-md-6">
             <div class="card shadow-lg" style="border-radius: 15px;">
                 <div class="card-header text-center" style="border-radius: 15px 15px 0 0; background-color: #007bff; color: white;">
